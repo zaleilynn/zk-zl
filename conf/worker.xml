@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<worker>
+  <master_endpoint>127.0.0.1:9999</master_endpoint>
+  <zk_endpoint>127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183</zk_endpoint>
+  <rpc_port>9997</rpc_port>
+  <bridge_interface>br0</bridge_interface>
+  <communication_interface>br0</communicaiton_interface>
+  <inner_interface>eth0</inner_interface>
+  <outter_interface>eth0</outter_interface>
+</worker>

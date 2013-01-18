@@ -1,0 +1,9 @@
+Starting zookeeper service: 
+script/start_zk.sh
+
+Using zookeeper client:
+cli_mt 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
+
+
+查看zookeeper 服务状态：
+echo state | nc 127.0.0.1 2181

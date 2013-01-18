@@ -1,0 +1,84 @@
+2013-01-18 10:03:38,624 [myid:] - INFO  [main:QuorumPeerConfig@101] - Reading configuration from: /root/server1/zookeeper-3.4.5/bin/../conf/zoo.cfg
+2013-01-18 10:03:38,652 [myid:] - INFO  [main:QuorumPeerConfig@334] - Defaulting to majority quorums
+2013-01-18 10:03:38,804 [myid:2] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2013-01-18 10:03:38,804 [myid:2] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2013-01-18 10:03:38,805 [myid:2] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2013-01-18 10:03:38,846 [myid:2] - INFO  [main:QuorumPeerMain@127] - Starting quorum peer
+2013-01-18 10:03:39,090 [myid:3] - INFO  [main:NIOServerCnxnFactory@94] - binding to port 0.0.0.0/0.0.0.0:2183
+2013-01-18 10:03:39,277 [myid:3] - INFO  [main:QuorumPeer@913] - tickTime set to 2000
+2013-01-18 10:03:39,278 [myid:3] - INFO  [main:QuorumPeer@933] - minSessionTimeout set to -1
+2013-01-18 10:03:39,278 [myid:3] - INFO  [main:QuorumPeer@944] - maxSessionTimeout set to -1
+2013-01-18 10:03:39,278 [myid:3] - INFO  [main:QuorumPeer@959] - initLimit set to 10
+2013-01-18 10:03:39,776 [myid:3] - INFO  [main:FileSnap@83] - Reading snapshot /root/server3/data/version-2/snapshot.1200000000
+2013-01-18 10:03:39,891 [myid:2] - INFO  [Thread-1:QuorumCnxManager$Listener@486] - My election bind port: 0.0.0.0/0.0.0.0:3889
+2013-01-18 10:03:39,904 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2182:QuorumPeer@670] - LOOKING
+2013-01-18 10:03:39,905 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2182:FastLeaderElection@740] - New election. My id =  2, proposed zxid=0x1000000001
+2013-01-18 10:03:39,945 [myid:3] - INFO  [/127.0.0.1:3890:QuorumCnxManager$Listener@493] - Received connection request /127.0.0.1:34567
+2013-01-18 10:03:39,947 [myid:3] - INFO  [WorkerReceiver[myid=3]:FastLeaderElection@542] - Notification: 3 (n.leader), 0x1200000000 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x13 (n.peerEPoch), LOOKING (my state)
+2013-01-18 10:03:39,965 [myid:3] - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@762] - Connection broken for id 1, my id = 3, error = 
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:129)
+	at java.net.SocketInputStream.read(SocketInputStream.java:182)
+	at java.io.DataInputStream.readInt(DataInputStream.java:370)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:747)
+2013-01-18 10:03:39,966 [myid:3] - INFO  [/127.0.0.1:3890:QuorumCnxManager$Listener@493] - Received connection request /127.0.0.1:34569
+2013-01-18 10:03:39,966 [myid:3] - WARN  [RecvWorker:1:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+2013-01-18 10:03:39,965 [myid:3] - WARN  [SendWorker:1:QuorumCnxManager$SendWorker@679] - Interrupted while waiting for message on queue
+java.lang.InterruptedException
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.reportInterruptAfterWait(AbstractQueuedSynchronizer.java:1961)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2038)
+	at java.util.concurrent.ArrayBlockingQueue.poll(ArrayBl2013-01-18 10:03:39,967 [myid:2] - INFO  [WorkerReceiver[myid=2]:FastLeaderElection@542] - Notification: 3 (n.leader), 0x1200000000 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x13 (n.peerEPoch), LOOKING (my state)
+2013-01-18 10:03:39,969 [myid:2] - WARN  [RecvWorker:3:QuorumCnxManager$RecvWorker@762] - Connection broken for id 3, my id = 2, error = 
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:375)
+	at org.apache.zookeeper.server.quorum.QuorumCnxManager$RecvWorker.run(QuorumCnxManager.java:747)
+2013-01-18 10:03:39,970 [myid:2] - WARN  [RecvWorker:3:QuorumCnxManager$RecvWorker@765] - Interrupting SendWorker
+2013-01-18 10:03:39,972 [myid:2] - WARN  [SendWorker:3:QuorumCnxManager$SendWorker@684] - Exception when using channel: for id 3 my id = 2 error = java.net.SocketException: Broken pipe
+2013-01-18 10:03:39,973 [myid:2] - INFO  [/127.0.0.1:3889:QuorumCnxManager$Listener@493] - Received connection reques2013-01-18 10:03:39,980 [myid:1] - INFO  [WorkerReceiver[myid=1]:FastLeaderElection@542] - Notification: 3 (n.leader), 0x1200000000 (n.zxid), 0x1 (n.round), LOOKING (n.state), 3 (n.sid), 0x13 (n.peerEPoch), LOOKING (my state)
+2013-01-18 10:03:40,181 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:QuorumPeer@738] - FOLLOWING
+2013-01-18 10:03:40,193 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Learner@85] - TCP NoDelay set to: true
+2013-01-18 10:03:40,290 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:zookeeper.version=3.4.5-1392090, built on 09/30/2012 17:52 GMT
+2013-01-18 10:03:40,291 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:host.name=zaleilynn-VPCEG36EC
+2013-01-18 10:03:40,291 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.version=1.6.0_26
+2013-01-18 10:03:40,291 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.vendor=Sun Microsystems Inc.
+2013-01-18 10:03:40,291 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.home=/usr/lib/jvm/java-6-sun-1.6.0.26/jre
+2013-01-18 10:03:40,291 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.class.path=/root/server1/zookeeper-3.4.5/bin/../build/classes:/root/server1/zookeeper-3.4.5/bin/../build/lib/*.jar:/root/server1/zookeeper-3.4.5/bin/../lib/slf4j-log4j12-1.6.1.jar:/root/server1/zookeeper-3.4.5/bin/../lib/slf4j-api-1.6.1.jar:/root/server1/zookeeper-3.4.5/bin/../lib/netty-3.2.2.Final.jar:/root/server1/zookeeper-3.4.5/bin/../lib/log4j-1.2.15.jar:/root/server1/zookeeper-3.4.5/bin/../lib/jline-0.9.94.jar:/root/server1/zookeeper-3.4.5/bin/../zookeeper-3.4.5.jar:/root/server1/zookeeper-3.4.5/bin/../src/java/lib/*.jar:/root/server1/zookeeper-3.4.5/bin/../conf:.:/usr/lib/jvm/java-6-sun/lib/dt.jar:/usr/lib/jvm/java-6-sun/lib/tools.jar:/home/hadoop/hadoop-0.20.203.0/hadoop-core-0.20.203.0.jar:/home/hadoop/hadoop-0.20.203.0/lib/commons-logging-1.1.1.jar:/home/hadoop/hadoop-0.20.203.0/lib/commons-configuration-1.6.jar:/home/hadoop/hadoop-0.20.203.0/lib/commons-lang-2.4.jar
+2013-01-18 10:03:40,292 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.library.path=/usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/amd64/server:/usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/amd64:/usr/lib/jvm/java-6-sun-1.6.0.26/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2013-01-18 10:03:40,292 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.io.tmpdir=/tmp
+2013-01-18 10:03:40,292 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:java.compiler=<NA>
+2013-01-18 10:03:40,292 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.name=Linux
+2013-01-18 10:03:40,293 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.arch=amd64
+2013-01-18 10:03:40,293 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:os.version=3.0.0-30-generic
+2013-01-18 10:03:40,294 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.name=root
+2013-01-18 10:03:40,294 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.home=/root
+2013-01-18 10:03:40,294 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Environment@100] - Server environment:user.dir=/home/zaleilynn/workspace/zlynn/script
+2013-01-18 10:03:40,296 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:ZooKeeperServer@162] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /root/server1/dataLog/version-2 snapdir /root/server1/data/version-2
+2013-01-18 10:03:40,312 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Follower@63] - FOLLOWING - LEADER ELECTION TOOK - 416
+2013-01-18 10:03:40,488 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:Learner@325] - Getting a snapshot from leader
+2013-01-18 10:03:40,495 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: 0x1200000000 to /root/server1/data/version-2/snapshot.1200000000
+2013-01-18 10:03:40,576 [myid:1] - INFO  [QuorumPeer[myid=1]/0:0:0:0:0:0:0:0:2181:FileTxnSnapLog@240] - Snapshotting: 0x1200000000 to /root/server1/data/version-2/snapshot.1200000000
+/commons-lang-2.4.jar
+2013-01-18 10:03:40,258 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:java.library.path=/usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/amd64/server:/usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/amd64:/usr/lib/jvm/java-6-sun-1.6.0.26/jre/../lib/amd64:/usr/jav2013-01-18 10:03:40,312 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2182:Follower@63] - FOLLOWING - LEADER ELECTION TOOK - 407
+2013-01-18 10:03:40,481 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2182:Learner@325] - Getting a snapshot from leader
+2013-01-18 10:03:40,495 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2182:FileTxnSnapLog@240] - Snapshotting: 0x1200000000 to /root/server2/data/version-2/snapshot.1200000000
+2013-01-18 10:03:40,574 [myid:2] - INFO  [QuorumPeer[myid=2]/0:0:0:0:0:0:0:0:2182:FileTxnSnapLog@240] - Snapshotting: 0x1200000000 to /root/server2/data/version-2/snapshot.1200000000
+3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:os.version=3.0.0-30-generic
+2013-01-18 10:03:40,259 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:user.name=root
+2013-01-18 10:03:40,260 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:user.home=/root
+2013-01-18 10:03:40,260 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Environment@100] - Server environment:user.dir=/home/zaleilynn/workspace/zlynn/script
+2013-01-18 10:03:40,261 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:ZooKeeperServer@162] - Created server with tickTime 2000 minSessionTimeout 4000 maxSessionTimeout 40000 datadir /root/server3/dataLog/version-2 snapdir /root/server3/data/version-2
+2013-01-18 10:03:40,314 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:Leader@345] - LEADING - LEADER ELECTION TOOK - 417
+2013-01-18 10:03:40,325 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:FileSnap@83] - Reading snapshot /root/server3/data/version-2/snapshot.1200000000
+2013-01-18 10:03:40,338 [myid:3] - INFO  [QuorumPeer[myid=3]/0:0:0:0:0:0:0:0:2183:FileTxnSnapLog@240] - Snapshotting: 0x1200000000 to /root/server3/data/version-2/snapshot.1200000000
+2013-01-18 10:03:40,366 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50020:LearnerHandler@263] - Follower sid: 1 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@5c1fe88d
+2013-01-18 10:03:40,366 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50019:LearnerHandler@263] - Follower sid: 2 : info : org.apache.zookeeper.server.quorum.QuorumPeer$QuorumServer@5c1fe88d
+2013-01-18 10:03:40,480 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50019:LearnerHandler@318] - Synchronizing with Follower sid: 2 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x1000000001
+2013-01-18 10:03:40,481 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50019:LearnerHandler@395] - Sending SNAP
+2013-01-18 10:03:40,481 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50019:LearnerHandler@419] - Sending snapshot last zxid of peer is 0x1000000001  zxid of leader is 0x1400000000sent zxid of db as 0x1200000000
+2013-01-18 10:03:40,487 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50020:LearnerHandler@318] - Synchronizing with Follower sid: 1 maxCommittedLog=0x0 minCommittedLog=0x0 peerLastZxid=0x1000000001
+2013-01-18 10:03:40,488 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50020:LearnerHandler@395] - Sending SNAP
+2013-01-18 10:03:40,489 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50020:LearnerHandler@419] - Sending snapshot last zxid of peer is 0x1000000001  zxid of leader is 0x1400000000sent zxid of db as 0x1200000000
+2013-01-18 10:03:40,575 [myid:3] - WARN  [LearnerHandler-/127.0.0.1:50019:Leader@574] - Commiting zxid 0x1400000000 from /127.0.0.1:2890 not first!
+2013-01-18 10:03:40,575 [myid:3] - WARN  [LearnerHandler-/127.0.0.1:50019:Leader@576] - First is 0x0
+2013-01-18 10:03:40,575 [myid:3] - INFO  [LearnerHandler-/127.0.0.1:50019:Leader@598] - Have quorum of supporters; starting up and setting last processed zxid: 0x1400000000

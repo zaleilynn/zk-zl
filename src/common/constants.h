@@ -1,0 +1,6 @@
+#ifndef ZLYNN_SRC_COMMON_CONSTANTS_H_
+#define ZLYNN_SRC_COMMON_CONSTANTS_H_
+
+static const unsigned MAX_ZNODE_VALUE_LENGTH = 512;
+
+#endif

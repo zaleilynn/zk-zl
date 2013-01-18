@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<master>
+  <zk_endpoint>127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183</zk_endpoint>
+  <rpc_port>9999</rpc_port>
+</master>
+

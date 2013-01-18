@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/Master.cpp
+Master.h
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/Master.h
+
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/Master.h
+thrift/TDispatchProcessor.h
+-
+master_types.h
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_types.h
+
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_constants.cpp
+master_constants.h
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_constants.h
+
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_constants.h
+master_types.h
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_types.h
+
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_types.cpp
+master_types.h
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_types.h
+algorithm
+-
+
+/home/zaleilynn/workspace/zlynn/src/proxy/master/gen-cpp/master_types.h
+thrift/Thrift.h
+-
+thrift/TApplicationException.h
+-
+thrift/protocol/TProtocol.h
+-
+thrift/transport/TTransport.h
+-
+
